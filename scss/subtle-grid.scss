@@ -1,0 +1,168 @@
+$gutter:5px;
+
+
+.col {
+		display:flex;
+		flex-wrap:wrap;
+		flex-direction: column;
+		height:100%;
+		width:100%;
+		padding:$gutter;
+}
+
+.row {
+		display:flex;
+		flex-wrap:wrap;
+}
+
+.center {
+	justify-content:center;
+
+}
+
+.left {
+	justify-content:center;
+}
+
+.right {
+	justify-content:center;
+}
+
+.top {
+	justify-content:flex-start;
+}
+
+.bottom {
+	justify-content:flex-end;
+}
+
+.half, 
+.one-quarter, .three-quarter, 
+.one-fifth, .one-fifth:nth-of-type(4), .one-fifth:nth-of-type(5),
+.one-third, .two-third, .one-sixth,
+.col-auto{
+		flex: 1 1 100%;
+		margin:$gutter;
+}
+
+
+//media medium screen
+@media (min-width: 481px) {
+	
+	.col{	
+		width:100%;
+		flex-wrap:nowrap;
+
+	}
+
+	.row {
+	}
+
+	.left {
+		justify-content:flex-start;
+	}
+
+	.right {
+		justify-content:flex-end;
+	}
+
+	.half {
+		flex-basis:calc(50% - (#{$gutter}*2));	
+	}
+
+	.one-quarter{
+  		flex-basis:calc(50% - (#{$gutter}*2)); 
+	}
+
+	.one-third {
+		flex-basis:calc(33.333333% - (#{$gutter}*2));	
+	}
+	
+	.one-third:nth-of-type(3) {
+		flex-basis:100%;
+	}
+
+	.one-fifth{
+		flex-basis:calc(33.333333% - (#{$gutter}*2));	
+	}
+
+	.one-sixth{
+		flex-basis:calc(50% - (#{$gutter}*2)); 
+	}
+
+
+	.col-auto {
+		flex: 1 1 100%;
+	}
+	
+		
+	.one-fifth:nth-of-type(4), .one-fifth:nth-of-type(5) {
+		flex-basis:calc(50% - (#{$gutter}*2));	
+	}	
+
+}// end medium media screen
+
+//media large screen
+@media (min-width:769px){
+
+
+
+	.row {
+		padding:$gutter;
+		flex-wrap:nowrap;
+	}
+
+
+ .col-auto, .col-1, .col-2, .col-3,  .col-4, .col-6, .col-12 {
+ 	flex: 1 1 100%; margin:$gutter;
+ 	}
+
+
+ //Sections layout
+	.one-quarter {
+		flex-basis: 25%;	
+		margin:$gutter;
+	}
+
+	.three-quarter {
+		flex-basis:75%;	
+		margin:$gutter;
+
+	}
+
+	.one-third {
+		margin:$gutter;
+		flex-basis:33.333333%;	
+	}
+
+	.one-third:nth-of-type(3) {
+		flex-basis:33.333333%;
+	}
+
+	.two-third {
+		flex-basis:66.666666%;	
+		margin:$gutter;
+	}
+
+	.one-fifth {
+		flex-basis:20%;	
+		margin:$gutter;
+	}
+
+	.one-sixth {
+		flex-basis:16.666666%;
+		margin:$gutter;
+	}
+
+	.one-fifth:nth-of-type(4), .one-fifth:nth-of-type(5) {
+		flex-basis:20%;	
+	}
+
+
+	.half{
+		margin:$gutter;
+		flex-basis:50%;	
+	}
+
+
+} // end media large screen
